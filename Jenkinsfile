@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     echo 'Building TechMart Docker Image...'
-                    bat 'docker build -t flask-techmart .'
+                    sh 'docker build -t flask-techmart .'
                 }
             }
         }
@@ -16,8 +16,8 @@ pipeline {
                 script {
                     echo 'Stopping and removing old container if active...'
                     catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS') {
-                        bat 'docker stop my-techmart-app'
-                        bat 'docker rm my-techmart-app'
+                        sh 'docker stop my-techmart-app'
+                        sh 'docker rm my-techmart-app'
                     }
                 }
             }
@@ -27,7 +27,7 @@ pipeline {
             steps {
                 script {
                     echo 'Deploying new TechMart store application...'
-                    bat 'docker run -d -p 5000:5000 --name my-techmart-app flask-techmart'
+                    sh 'docker run -d -p 5000:5000 --name my-techmart-app flask-techmart'
                 }
             }
         }
