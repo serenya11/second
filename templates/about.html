@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About - TechMart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="/">🛒 TechMart Electronics</a>
+            <div>
+                <a href="/" class="btn btn-outline-light btn-sm me-2">Store Home</a>
+                <a href="/about" class="btn btn-outline-light btn-sm">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="p-5 bg-white rounded-3 shadow-sm border">
+            <h2 class="text-primary fw-bold">About TechMart Microservice</h2>
+            <p class="lead mt-3">This e-commerce application serves as the production workload inside our automated DevOps pipeline.</p>
+            <hr>
+            <h5>Pipeline Architecture Stack:</h5>
+            <ul>
+                <li><strong>Application:</strong> Python Flask + Bootstrap 5</li>
+                <li><strong>CI/CD Engine:</strong> Jenkins Pipelines</li>
+                <li><strong>Containerization:</strong> Docker Desktop</li>
+                <li><strong>Metrics Exporter:</strong> Prometheus Client SDK (`/metrics`)</li>
+                <li><strong>Visualization:</strong> Grafana Dashboards</li>
+            </ul>
+            <a href="/" class="btn btn-primary mt-3">Back to Store Catalog</a>
+        </div>
+    </div>
+
+</body>
+</html>
